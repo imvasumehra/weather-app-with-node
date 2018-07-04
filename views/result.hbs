@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Aref Ruqaa' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <title>Check Weather</title>
+    <style media="screen">
+    input[type=text], select {
+  width: 100%;
+  padding: 20px 40px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size:20px
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+::-webkit-input-placeholder {
+
+  font-size: 20px;
+}
+::-moz-placeholder {
+
+  font-size: 20px;
+}
+:-ms-input-placeholder {
+
+  font-size: 20px;
+}
+::placeholder {
+
+  font-size: 20px;
+}
+    </style>
+  </head>
+  <body style="background-color:#4CAF50;">
+    <div style="margin: 100px 250px 1px 250px;box-shadow:0.5px 0.5px 1px 1px;border-radius:25px 25px 25px 25px">
+      <div style="border:1px solid black;margin:0px 0px 0px 0px;padding:10px 0px 10px 0px;text-align:center;background-color:rgb(255, 255, 255);
+                  border-radius:25px 25px 0px 0px;font-family: 'Aref Ruqaa';font-size:25px">
+        <p>WE &nbsp; GOT &nbsp;YA'&nbsp; COVERED</p>
+      </div>
+      <div style="margin:1px 1px 1px 1px;border:5px 5px 0px 5px solid black;box-shadow:0.5px 0.5px 1px 1px;background-color:rgb(255, 255, 255);
+                  font-family:'Lato';padding:5px 5px 5px 10px;border-radius:0px 0px 25px 25px">
+        <div style="font-size:18px">
+          <h4>Following are the temperature details of {{fa}}</h4>
+        </div>
+        <div style="font-size:15px">
+          <ul>
+            <li>Actual Temperature: {{tmp}}&#8451;</li>
+            <br>
+            <li>Feels like: {{atmp}}&#8451;</li>
+            <br>
+            <li>Precipitation Probability: {{precP}}</li>
+            <br>
+            <li>Precipitation Intensity: {{precI}}</li>
+            <br>
+            <li>Humidity: {{hm}}</li>
+            <br>
+            <li>Summary for the day: {{hs}}</li>
+            <br>
+            <li>Summary for the week: {{ds}}</li>
+          </ul>
+          <div style="text-align:center">
+            <a href="/" class="button">Search Again</a>
+          </div>
+
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
