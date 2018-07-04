@@ -23,7 +23,12 @@ app.post('/address', (req, res) =>{
   var newAddress = req.body.address;
   geocode.geoCodeAddress(newAddress, (err, results) => {
     if(err) {
-      res.render('error',{err:err});
+      if(err === 'Query Limit Reached! Try Again'){
+        res.render('home2');
+      } else {
+        res.render('error',{err:err})
+      }
+
     } else {
       //console.log(`-------FOR ${results.lat} and ${results.lng}-------`);
       weather.getWeather(results.lat, results.lng, (err, result) => {
