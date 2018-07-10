@@ -16,7 +16,7 @@ app.use(express.static(__dirname + '/public'));
 //const weather = require('./weather/weather')
 
 app.get('/', (req, res) => {
-  res.render('home')
+  res.render('home');
 });
 
 app.post('/address', (req, res) =>{
@@ -26,7 +26,7 @@ app.post('/address', (req, res) =>{
       if(err === 'Query Limit Reached! Try Again'){
         res.render('home2');
       } else {
-        res.render('error',{err:err})
+        res.render('error',{err:err});
       }
 
     } else {
